@@ -1,0 +1,112 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+    background-color: transparent;
+    color: @foreground;
+
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: 'BitstromWera Nerd Font';
+    font-size: 12px;
+}
+
+.modules-left {
+    margin-left: 0;
+    background-color: #000000;
+    color: @foreground;
+    border-radius: 0 15px 15px 0;
+    padding-right: 5px;
+}
+.modules-center {
+  padding: 0 10px;
+  background-color: #000000;
+  color: @foreground;
+  border-radius: 15px 15px 15px 15px
+}        
+.modules-right {
+    margin-right: 0;
+    background-color: #000000;
+    color: @foreground;
+    border-radius: 15px 0 0 15px;
+    padding-left: 5px;
+}
+
+#workspaces button {
+    all: initial;
+    padding: 0 6px;
+    margin: 0 1.5px;
+    min-width: 9px;
+}
+
+#workspaces button.empty {
+    opacity: 0.5;
+}
+
+#cpu,
+#memory,
+#battery,
+#pulseaudio,
+#bluetooth
+#custom-omarchy,
+#custom-screenrecording-indicator,
+#custom-update {
+    min-width: 12px;
+    margin: 0 7.5px;
+}
+
+#tray {
+    margin-right: 13px;
+}
+
+#pulseaudio {
+  margin-right : 1px;
+}
+
+#cpu {
+  margin-right: 0px;
+}
+
+#bluetooth {
+    margin-right: 1px;
+}
+
+#network {
+    margin-right: 13px;
+}
+
+#custom-expand-icon {
+    margin-right: 3px;
+}
+
+tooltip {
+    padding: 2px;
+    background-color: #000000;
+    border-radius: 15px;
+}
+
+#custom-update {
+    font-size: 10px;
+}
+
+/* #clock { */
+/*     margin-left: 1px; */
+/* } */
+
+.hidden {
+    opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+    min-width: 12px;
+    margin-left: 8.75px;
+    font-size: 10px;
+}
+
+#custom-screenrecording-indicator.active {
+    color: #a55555;
+}
+
+#custom-notification {
+    font-family: 'BitstromWera Nerd Font';
+}
