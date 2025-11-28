@@ -13,20 +13,20 @@
 
 .modules-left {
     margin-left: 0;
-    background-color: #000000;
+    background-color: @background;
     color: @foreground;
     border-radius: 0 15px 15px 0;
     padding-right: 5px;
 }
 .modules-center {
   padding: 0 10px;
-  background-color: #000000;
+  background-color: @background;
   color: @foreground;
   border-radius: 15px 15px 15px 15px
 }        
 .modules-right {
     margin-right: 0;
-    background-color: #000000;
+    background-color: @background;
     color: @foreground;
     border-radius: 15px 0 0 15px;
     padding-left: 5px;
@@ -87,6 +87,12 @@ tooltip {
 
 #custom-update {
     font-size: 10px;
+}
+
+#window {
+    transition-property: transparent;
+    transition-duration: .5s;
+    margin-left: 8px;
 }
 
 /* #clock { */
