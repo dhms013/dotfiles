@@ -3,7 +3,6 @@
 * {
     background-color: transparent;
     color: @foreground;
-
     border: none;
     border-radius: 0;
     min-height: 0;
@@ -15,38 +14,42 @@
     margin-left: 0;
     background-color: @background;
     color: @foreground;
-    border-radius: 0 15px 15px 0;
+    border: 1px solid alpha(@foreground, 0.8);
+    border-radius: 0 16px 16px 0;
     padding-right: 5px;
 }
 .modules-center {
   padding: 0 10px;
   background-color: @background;
+  border: 1px solid alpha(@foreground, 0.8);
   color: @foreground;
-  border-radius: 15px 15px 15px 15px
+  border-radius: 16px 16px 16px 16px;
 }        
 .modules-right {
     margin-right: 0;
     background-color: @background;
     color: @foreground;
-    border-radius: 15px 0 0 15px;
+    border: 1px solid alpha(@foreground, 0.8);
+    border-radius: 16px 0 0 16px;
     padding-left: 5px;
 }
 
 #workspaces button {
     all: initial;
-    padding: 0 6px;
+    padding: 0 3px;
     margin: 0 1.5px;
     min-width: 9px;
 }
 
 #workspaces button.empty {
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 #cpu,
 #memory,
 #battery,
 #pulseaudio,
+#network,
 #bluetooth
 #custom-omarchy,
 #custom-screenrecording-indicator,
@@ -55,33 +58,34 @@
     margin: 0 7.5px;
 }
 
-#tray {
-    margin-right: 13px;
-}
-
-#pulseaudio {
-  margin-right : 1px;
-}
-
-#cpu {
-  margin-right: 0px;
-}
-
-#bluetooth {
-    margin-right: 1px;
-}
-
-#network {
-    margin-right: 13px;
-}
-
-#custom-expand-icon {
-    margin-right: 3px;
-}
+/* #tray { */
+/*     margin-right: 13px; */
+/* } */
+/**/
+/* #pulseaudio { */
+/*   margin-right : 7px; */
+/* } */
+/**/
+/* #cpu { */
+/*   margin-right: 0px; */
+/* } */
+/**/
+/* #bluetooth { */
+/*     margin-right: -5px; */
+/* } */
+/**/
+/* #network { */
+/*     margin-right: 13px; */
+/* } */
+/**/
+/* #custom-expand-icon { */
+/*     margin-left: 3px; */
+/*     margin-right: 3px; */
+/* } */
 
 tooltip {
     padding: 2px;
-    background-color: #000000;
+    background-color: @background;
     border-radius: 15px;
 }
 
@@ -89,11 +93,13 @@ tooltip {
     font-size: 10px;
 }
 
-#window {
-    transition-property: transparent;
-    transition-duration: .5s;
-    margin-left: 8px;
-}
+/* #window { */
+/*     transition-property: transparent; */
+/*     transition-duration: .5s; */
+/*     margin-left: 8px; */
+/*     margin-right: 8px; */
+/*     font-family: "BitstromWera Nerd Font"; */
+/* } */
 
 /* #clock { */
 /*     margin-left: 1px; */
