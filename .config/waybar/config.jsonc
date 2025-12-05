@@ -4,7 +4,7 @@
   "position": "top",
   "spacing": 0,
   "height": 26,
-  "modules-left": ["custom/omarchy", "temperature", "cpu", "memory", "hyprland/window"],
+  "modules-left": ["custom/omarchy", "temperature", "cpu", "memory", "network#speed", "hyprland/window"],
   "modules-center": ["hyprland/workspaces", "custom/screenrecording-indicator", "custom/update"],
   "modules-right": [
     "network",
@@ -105,7 +105,7 @@
     "on-click": "gnome-system-monitor"
   },
   "clock": {
-    "format": "{:%H:%M}",
+    "format": "{:L%a, %H:%M}",
     "format-alt": "{:L%A %d/%m/%Y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
@@ -124,10 +124,17 @@
                     },
   },
 
+  "network#speed": {
+        "format-wifi": "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+        "format-ethernet": "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+        "format-disconnected": "",
+        "interval": 1
+  },
+
   "network": {
     "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
     "format": "{icon}",
-    "format-wifi": "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes} {icon}",
+    "format-wifi": "{icon}",
     "format-ethernet": "󰀂",
     "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
