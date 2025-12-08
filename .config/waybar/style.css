@@ -21,6 +21,18 @@
     opacity: 0.3;
 }
 
+#workspaces button.active {
+    color: @accent;
+    background-color: @background;
+    border-radius: 13px;
+    border-top: 1px;
+    border-bottom: 1px;
+    min-width: 25px;
+    background-size: 200% 200%;
+    transition: all 0.3s ease-in-out;
+    /*opacity: 1.0;*/
+}
+
 window#waybar.empty #window {
     background: transparent;
     opacity: 0; 
