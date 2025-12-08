@@ -24,6 +24,7 @@ alias icat="clear; kitty +kitten icat"
 alias bashrc="clear; source ~/.bashrc"
 alias duf="clear; duf"
 alias update="sudo pacman -Syu -y; yay -y"
+alias gp="g push"
 alias jmeterShutdown="/opt/jmeter/bin/shutdown.sh"
 
 . "$HOME/.local/share/../bin/env"
