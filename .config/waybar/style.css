@@ -6,106 +6,65 @@
     border: none;
     border-radius: 0;
     min-height: 0;
+    padding: 0;
     font-family: 'BitstromWera Nerd Font';
     font-size: 12px;
 }
 
-.modules-left {
-    margin-left: 0;
-    background-color: @background;
-    color: @foreground;
-    border: 1px solid alpha(@foreground, 0.8);
-    border-radius: 0 16px 16px 0;
-    padding-right: 5px;
-}
-.modules-center {
-  padding: 0 10px;
-  background-color: @background;
-  border: 1px solid alpha(@foreground, 0.8);
-  color: @foreground;
-  border-radius: 16px 16px 16px 16px;
-}        
-.modules-right {
-    margin-right: 0;
-    background-color: @background;
-    color: @foreground;
-    border: 1px solid alpha(@foreground, 0.8);
-    border-radius: 16px 0 0 16px;
-    padding-left: 5px;
-}
-
 #workspaces button {
     all: initial;
-    padding: 0 3px;
-    margin: 0 1.5px;
-    min-width: 9px;
+    padding: 0;
+    margin: 0;
 }
 
 #workspaces button.empty {
     opacity: 0.3;
 }
 
+window#waybar.empty #window {
+    background: transparent;
+    opacity: 0; 
+}
+#custom-omarchy,
+#temperature,
 #cpu,
 #memory,
-#battery,
 #network#speed,
-##window,
-#pulseaudio,
+#workspaces button,
+#custom-update,
+#window,
 #network,
-#bluetooth
-#custom-omarchy,
+#bluetooth,
+#pulseaudio,
+#clock,
 #custom-screenrecording-indicator,
-#custom-update {
-    min-width: 12px;
-    margin: 0 7.5px;
+#custom-expand-icon,
+#battery {
+  min-width: 13px;
+  font-family: 'BitstromWera Nerd Font';
+  margin: 2.5px;
+  background-color: @background;
+  color: @foreground;
+  border: 1px solid alpha(@foreground, 0.8);
+  border-radius: 13px;
+  padding: 0;
+  padding-right: 3.5px;
+  padding-left: 3.5px;
 }
 
-/* #tray { */
-/*     margin-right: 13px; */
-/* } */
-/**/
-/* #pulseaudio { */
-/*   margin-right : 7px; */
-/* } */
-/**/
-/* #cpu { */
-/*   margin-right: 0px; */
-/* } */
-/**/
-/* #bluetooth { */
-/*     margin-right: -5px; */
-/* } */
-/**/
-/* #network { */
-/*     margin-right: 13px; */
-/* } */
-/**/
-/* #custom-expand-icon { */
-/*     margin-left: 3px; */
-/*     margin-right: 3px; */
-/* } */
+#network {
+  padding-left: 6.5px;
+}
 
 tooltip {
-    padding: 2px;
-    background-color: @background;
-    border-radius: 15px;
+  padding: 2px;
+  background-color: @background;
+  border-radius: 15px;
 }
 
 #custom-update {
-    font-size: 10px;
+  font-size: 10px;
 }
-
-/* #window { */
-/*     transition-property: transparent; */
-/*     transition-duration: .5s; */
-/*     margin-left: 8px; */
-/*     margin-right: 8px; */
-/*     font-family: "BitstromWera Nerd Font"; */
-/* } */
-
-/* #clock { */
-/*     margin-left: 1px; */
-/* } */
 
 .hidden {
     opacity: 0;
