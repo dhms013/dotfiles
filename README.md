@@ -1,3 +1,4 @@
 # dotfiles notes from dhms from omarchy
 
-1. install gnu stow, yazi, and other apps that used in omarchy
+1. install gnu stow, yazi, and other apps that used in omarchy/keybinding
+2. not use any app in keybinding? just change it
