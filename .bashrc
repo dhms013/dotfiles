@@ -23,7 +23,7 @@ alias expac="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
 alias icat="clear; kitty +kitten icat"
 alias bashrc="clear; source ~/.bashrc"
 alias duf="clear; duf"
-alias update="sudo pacman -Syu -y; yay -y"
+alias update="sudo pacman -Syu --noconfirm; yay -Syu --noconfirm"
 alias gp="g push"
 alias jmeterShutdown="/opt/jmeter/bin/shutdown.sh"
 
