@@ -24,8 +24,9 @@ alias icat="clear; kitty +kitten icat"
 alias bashrc="clear; source ~/.bashrc"
 alias duf="clear; duf"
 alias update="sudo pacman -Syu --noconfirm; yay -Syu --noconfirm"
-alias gp="g push"
-alias jmeterShutdown="/opt/jmeter/bin/shutdown.sh"
+alias gadd="git add"
+alias gcm="git commit -m"
+alias gp="git push"
 
 . "$HOME/.local/share/../bin/env"
 
