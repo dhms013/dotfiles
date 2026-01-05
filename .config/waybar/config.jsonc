@@ -20,8 +20,8 @@
     "on-click": "activate",
     "format": "{icon}",
     "format-icons": {
-      // "default": " ",
-      // "active": " ",
+      // "default": "",
+      // "active": "",
       "1":"一",
       "2":"二",
       "3":"三",
@@ -55,7 +55,8 @@
   },
   "custom/omarchy": {
     // "format": " <span font='omarchy'>\ue900</span> ",
-    "format": " ⨇rcⱨ ",
+    // "format": " ⨇rcⱨ ",
+    "format": "",
     "on-click": "omarchy-menu",
     "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space",
@@ -69,8 +70,9 @@
     "interval": 21600,
   },
   "custom/notification": {
-    "format": " ",
-    "on-click": "xdg-terminal-exec sh -c 'makoctl history && read' &",
+    "format": "",
+    "on-click": "~/.config/waybar/scripts/notification-menu",
+    "on-click-right": "xdg-terminal-exec --title=float sh -c 'makoctl history && read' &",
     "restart-interval": 1,
   },
   "temperature": {
@@ -87,13 +89,13 @@
     "on-click": "omarchy-launch-or-focus-tui btop",
   },
   "memory": {
-    "format": " {percentage}%",
+    "format": " {used}G/{total}G",
     "format-tooltip": "{used}G used, {available}G available, {total}G total",
     "interval": 5,
     "on-click": "gnome-system-monitor"
   },
   "clock": {
-    "format": " {:L%a, %H:%M} ",
+    "format": " {:L%a %d, %H:%M} ",
     "format-alt": " {:L%A %d/%m/%Y} ",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
@@ -113,18 +115,19 @@
   },
 
   "network#speed": {
-        "format-wifi": "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
-        "format-ethernet": "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
-        "format-disconnected": "",
-        "interval": 1
+    "format-wifi": "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "format-ethernet": "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "format-disconnected": " ",
+    "on-click": "xdg-terminal-exec --title=float cloudflare-speed-cli",
+    "interval": 1
   },
 
   "network": {
-    "format-icons": ["󰤯 ","󰤟 ","󰤢 ","󰤥 ","󰤨 "],
+    "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
     "format": "{icon}",
     "format-wifi": "{icon}",
-    "format-ethernet": "󰀂 ",
-    "format-disconnected": "󰤮 ",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
@@ -138,10 +141,10 @@
     "format-charging": "{capacity}%{icon}",
     "format-plugged": "",
     "format-icons": {
-      "charging": ["󰢜 ", "󰂆 ", "󰂇 ", "󰂈 ", "󰢝 ", "󰂉 ", "󰢞 ", "󰂊 ", "󰂋 ", "󰂅 "],
+      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
       "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     },
-    "format-full": "{capacity}% 󰂅 ",
+    "format-full": "{capacity}% 󰂅",
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     "interval": 5,
@@ -156,7 +159,7 @@
     "format-disabled": "󰂲",
     "format-off": "󰂲",
     "format-connected": "󰂱",
-    "format-no-controller": "",
+    "format-no-controller": "",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "omarchy-launch-bluetooth",
   },
@@ -166,9 +169,9 @@
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
-    "format-muted": " ",
+    "format-muted": "",
     "format-icons": {
-      "default": [" ", " ", " "],
+      "default": ["", "", ""],
     },
   },
   "group/tray-expander": {
@@ -180,7 +183,7 @@
     "modules": ["custom/expand-icon", "tray"],
   },
   "custom/expand-icon": {
-    "format": "  ",
+    "format": "",
     "tooltip": false,
   },
   "custom/screenrecording-indicator": {
